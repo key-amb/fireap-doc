@@ -1,0 +1,14 @@
+baseurl = "http://key-amb.github.io/fireap-doc"
+languageCode = "en-us"
+title = "fireap"
+theme = "bootie-docs"
+copyright = "Copyright (c) 2016, YASUTAKE Kiyoshi; All rights reserved."
+
+[params]
+  description = "(fire + reap) Fast task runner on Consul cluster"
+  #withSitePosts = true
+  mainMenu = ["tutorial", "usage", "spec"]
+  searchDomain = "key-amb.github.io/fireap-doc"
+  noCategoryLink = true
+  repositoryUrl = "https://github.com/key-amb/fireap/"
+  highlightStyle = "atelier-forest-dark"
