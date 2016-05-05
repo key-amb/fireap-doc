@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Indexes on fireap</title>
+    <link>http://key-amb.github.io/fireap-doc/index/</link>
+    <description>Recent content in Indexes on fireap</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2016, YASUTAKE Kiyoshi; All rights reserved.</copyright>
+    <lastBuildDate>Thu, 05 May 2016 12:01:29 +0900</lastBuildDate>
+    <atom:link href="http://key-amb.github.io/fireap-doc/index/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>_dummy</title>
+      <link>http://key-amb.github.io/fireap-doc/index/_dummy/</link>
+      <pubDate>Thu, 05 May 2016 12:01:29 +0900</pubDate>
+      
+      <guid>http://key-amb.github.io/fireap-doc/index/_dummy/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

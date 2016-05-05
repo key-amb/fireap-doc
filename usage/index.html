@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="alternate" href="/index.xml" type="application/rss+xml" title="fireap">
+		<link rel="icon" href="http://key-amb.github.io/fireap-doc/favicon.ico">
+		<title>Usage - fireap</title>
+		
+		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/highlight/atelier-forest-dark.css">
+		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/theme.css">
+		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/bootie-docs.css">
+	</head>
+
+<body role="document">
+
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="http://key-amb.github.io/fireap-doc/">fireap</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li ><a href="http://key-amb.github.io/fireap-doc/">Home</a></li>
+			
+				
+				
+					
+					<li ><a href="http://key-amb.github.io/fireap-doc/tutorial">Tutorial</a></li>
+				
+					
+					<li class="active"><a href="http://key-amb.github.io/fireap-doc/usage">Usage</a></li>
+				
+					
+					<li ><a href="http://key-amb.github.io/fireap-doc/spec">Spec</a></li>
+				
+			
+				
+				</ul>
+				
+				<form class="navbar-form navbar-left" role="search" action="https://www.google.co.jp/search" method="get">
+					<div class="input-group doc-search-form">
+						<input type="hidden" name="as_sitesearch" value="key-amb.github.io/fireap-doc">
+						<input type="text" name="as_q" class="search-query doc-search-input-text" placeholder="Search Site">
+						<span class="input-group-addon input-group-btn doc-search-input-btn">
+							<button class="btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+						</span>
+					</div>
+				</form>
+				
+			</div>
+		</div>
+	</nav>
+
+<div class="container">
+
+
+<div class="row">
+	<div class="col-sm-8 doc-main">
+		<main role="main">
+			<article>
+				<a id="title"></a>
+				<h1 class="doc-entry-title">Usage</h1>
+				<div class="doc-entry-meta">
+					<span><time datetime="2016-05-05">May 05, 2016</time></span>
+				</div>
+				<section>
+					
+
+<h1 id="cli-usage:dc32fe45042973266ca60588597e0b66">CLI Usage</h1>
+
+<p>This guide shows overview of <code>fireap</code> subcommands and typical usecases of
+<code>fireap</code> CLI.</p>
+
+<p>As for detailed usage of CLI, run <code>fireap help</code>.</p>
+
+<h2 id="general-information:dc32fe45042973266ca60588597e0b66">General Information</h2>
+
+<p>Global options:</p>
+
+<ul>
+<li><code>-c|--config=/path/to/config.toml</code>
+
+<ul>
+<li>Option to specify path of configuration file.</li>
+<li>When you set <code>$FIREAP_CONFIG_PATH</code> environment variable, you can omit this
+option.</li>
+</ul></li>
+</ul>
+
+<h2 id="subcommands:dc32fe45042973266ca60588597e0b66">Subcommands</h2>
+
+<h3 id="fireap-task:dc32fe45042973266ca60588597e0b66"><code>fireap task</code></h3>
+
+<pre><code class="language-bash">fireap task [-w &lt;WIDTH&gt;] [OPTIONS]
+</code></pre>
+
+<p>This shows the task settings under <code>[task]</code> sections in the configuration file.<br />
+By this command, you can also check if the configuration is valid or not.</p>
+
+<h3 id="fireap-fire:dc32fe45042973266ca60588597e0b66"><code>fireap fire</code></h3>
+
+<pre><code class="language-bash">fireap fire -a &lt;APP&gt; [-v &lt;VERSION&gt;] [OPTIONS]
+# To limit target node to execute the task
+fireap fire -a &lt;APP&gt; --node-name|-n=&lt;NODE_NAME&gt; [-v &lt;VERSION&gt;] [OPTIONS]
+</code></pre>
+
+<p>This fires a <strong>fireap</strong> task propagation.</p>
+
+<p>If you omit <code>-v|--version=&lt;VERSION&gt;</code> option, <strong>fireap</strong> start with version <em>&ldquo;1&rdquo;</em>
+if it is the first execution.
+When you have already executed the task, <strong>fireap</strong> increments the version
+which is taken in the last execution.<br />
+For example, when the version last executed is <em>&ldquo;v1.0.0&rdquo;</em>, next version will be
+<em>&ldquo;v1.0.1&rdquo;</em> without <code>-v|--version</code> option.</p>
+
+<p>Read <a href="../tutorial">Getting Started</a> for more information.</p>
+
+<h3 id="fireap-clear:dc32fe45042973266ca60588597e0b66"><code>fireap clear</code></h3>
+
+<pre><code class="language-bash">fireap clear -a &lt;APP&gt; [OPTIONS]
+</code></pre>
+
+<p><code>fireap fire</code> holds lock for each <code>&lt;APP&gt;</code> during the command execution to avoid
+multiple execution of a task.</p>
+
+<p>You do not need to run this in usual operation.<br />
+But <strong>fireap</strong> supports this subcommand for rare possibility.</p>
+
+<h3 id="fireap-reap:dc32fe45042973266ca60588597e0b66"><code>fireap reap</code></h3>
+
+<pre><code class="language-bash">fireap reap [OPTIONS]
+fireap reap --dry-run [OPTIONS]
+</code></pre>
+
+<p>This receives contents of <em>Consul Event</em> from STDIN, then executes configured
+task.<br />
+It is supposed to be used as <em>watch handler</em> of <em>consul agent</em>.</p>
+
+<p>However, if you want to check how this works preliminarily, you can do it by
+command like followings:</p>
+
+<pre><code class="language-bash">curl http://localhost:8500/v1/event/list | fireap reap [--dry-run] [OPTIONS]
+</code></pre>
+
+<p>With <code>--dry-run</code> option, this does not execute commands set in the task but
+prints them.</p>
+
+<p>Read <a href="../tutorial">Getting Started</a> for detailed instruction to use this
+as <em>Consul Watch Handler</em>.</p>
+
+<h3 id="fireap-monitor:dc32fe45042973266ca60588597e0b66"><code>fireap monitor</code></h3>
+
+<pre><code class="language-bash">fireap monitor -a &lt;APP&gt; [OPTIONS]
+fireap monitor -a &lt;APP&gt; --one-shot [OPTIONS]
+</code></pre>
+
+<p>This shows data in <em>Consul Kv</em> related to <code>&lt;APP&gt;</code>.<br />
+You can check task propagation by this.</p>
+
+<p>Without <code>-o|--one-shot</code> option, it continuously shows the data until it
+receives <code>INT</code> signal (corresponds to <code>Ctrl-C</code> in many terminal
+environments).</p>
+
+				</section>
+			</article>
+		</main>
+	</div> 
+
+	
+<div class="col-sm-3 col-sm-offset-1 doc-sidebar">
+	<div id="sidebar">
+	<div class="sidebar-module">
+		<div class="sidebar-toc">
+			<h4>Table of Contents</h4>
+			<ul>
+				<li><strong><a href="#title">Usage</a></strong></li>
+			</ul>
+			<nav id="TableOfContents">
+<ul>
+<li><a href="#cli-usage:dc32fe45042973266ca60588597e0b66">CLI Usage</a>
+<ul>
+<li><a href="#general-information:dc32fe45042973266ca60588597e0b66">General Information</a></li>
+<li><a href="#subcommands:dc32fe45042973266ca60588597e0b66">Subcommands</a>
+<ul>
+<li><a href="#fireap-task:dc32fe45042973266ca60588597e0b66"><code>fireap task</code></a></li>
+<li><a href="#fireap-fire:dc32fe45042973266ca60588597e0b66"><code>fireap fire</code></a></li>
+<li><a href="#fireap-clear:dc32fe45042973266ca60588597e0b66"><code>fireap clear</code></a></li>
+<li><a href="#fireap-reap:dc32fe45042973266ca60588597e0b66"><code>fireap reap</code></a></li>
+<li><a href="#fireap-monitor:dc32fe45042973266ca60588597e0b66"><code>fireap monitor</code></a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+		</div>
+	</div>
+	<div class="sidebar-module">
+		<h4>Tags</h4>
+		<div class="tag-box">
+		
+			<a class="tag-item" href="http://key-amb.github.io/fireap-doc/tags/document">document</a>
+		
+		</div>
+	</div>
+	</div>
+</div>
+
+</div> 
+
+
+<hr />
+
+<div class="row">
+	<div class="col-sm-8">
+		<p class="doc-footer-em"><a href="#">Back to TOP</a></p>
+	</div>
+</div>
+
+</div> 
+
+<footer class="doc-footer">
+	<p class="doc-footer-em">Browse <strong><a href="https://github.com/key-amb/fireap/">Repository</a></strong></p>
+	<p>Copyright (c) 2016, YASUTAKE Kiyoshi; All rights reserved.</p>
+	<p>Powered by <strong><a href="https://github.com/key-amb/hugo-theme-bootie-docs">Bootie Docs</a></strong> - theme for <a href="http://gohugo.io/">Hugo</a> by <a href="https://github.com/key-amb/">key-amb</a>.</p>
+</footer>
+
+
+
+<script src="http://key-amb.github.io/fireap-doc/js/jquery.min.js"></script>
+<script src="http://key-amb.github.io/fireap-doc/js/bootstrap.min.js"></script>
+
+<script src="http://key-amb.github.io/fireap-doc/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="http://key-amb.github.io/fireap-doc/js/ie10-viewport-bug-workaround.js"></script>
+<script src="http://key-amb.github.io/fireap-doc/js/bootie-docs.js"></script>
+
+</body>
+</html>
