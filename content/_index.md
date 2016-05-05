@@ -4,7 +4,7 @@ title = "_index"
 
 +++
 
-Welcome to the **fireap** documentation wiki!
+Welcome to the **fireap** documentation site!
 
 If you are new to **fireap**, please take a look at README.md in the [repository](https://github.com/key-amb/fireap/).  
 It will help you to understand this documentation and what will be advantage
