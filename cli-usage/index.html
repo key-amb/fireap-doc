@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="alternate" href="/index.xml" type="application/rss+xml" title="fireap">
 		<link rel="icon" href="http://key-amb.github.io/fireap-doc/favicon.ico">
-		<title>Usage - fireap</title>
+		<title>CLI Usage - fireap</title>
 		
 		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/highlight/atelier-forest-dark.css">
 		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/bootstrap.min.css">
@@ -37,13 +37,13 @@
 				
 				
 					
-					<li ><a href="http://key-amb.github.io/fireap-doc/tutorial">Tutorial</a></li>
+					<li ><a href="http://key-amb.github.io/fireap-doc/getting-started">Quickstart</a></li>
 				
 					
-					<li class="active"><a href="http://key-amb.github.io/fireap-doc/usage">Usage</a></li>
+					<li class="active"><a href="http://key-amb.github.io/fireap-doc/cli-usage">CLI</a></li>
 				
 					
-					<li ><a href="http://key-amb.github.io/fireap-doc/spec">Spec</a></li>
+					<li ><a href="http://key-amb.github.io/fireap-doc/specification">Spec</a></li>
 				
 			
 				
@@ -71,21 +71,19 @@
 		<main role="main">
 			<article>
 				<a id="title"></a>
-				<h1 class="doc-entry-title">Usage</h1>
+				<h1 class="doc-entry-title">CLI Usage</h1>
 				<div class="doc-entry-meta">
 					<span><time datetime="2016-05-05">May 05, 2016</time></span>
 				</div>
 				<section>
 					
 
-<h1 id="cli-usage:dc32fe45042973266ca60588597e0b66">CLI Usage</h1>
-
 <p>This guide shows overview of <code>fireap</code> subcommands and typical usecases of
 <code>fireap</code> CLI.</p>
 
 <p>As for detailed usage of CLI, run <code>fireap help</code>.</p>
 
-<h2 id="general-information:dc32fe45042973266ca60588597e0b66">General Information</h2>
+<h2 id="general-information:1417e9bcba133c9b46200323a311e359">General Information</h2>
 
 <p>Global options:</p>
 
@@ -99,9 +97,9 @@ option.</li>
 </ul></li>
 </ul>
 
-<h2 id="subcommands:dc32fe45042973266ca60588597e0b66">Subcommands</h2>
+<h2 id="subcommands:1417e9bcba133c9b46200323a311e359">Subcommands</h2>
 
-<h3 id="fireap-task:dc32fe45042973266ca60588597e0b66"><code>fireap task</code></h3>
+<h3 id="fireap-task:1417e9bcba133c9b46200323a311e359"><code>fireap task</code></h3>
 
 <pre><code class="language-bash">fireap task [-w &lt;WIDTH&gt;] [OPTIONS]
 </code></pre>
@@ -109,7 +107,7 @@ option.</li>
 <p>This shows the task settings under <code>[task]</code> sections in the configuration file.<br />
 By this command, you can also check if the configuration is valid or not.</p>
 
-<h3 id="fireap-fire:dc32fe45042973266ca60588597e0b66"><code>fireap fire</code></h3>
+<h3 id="fireap-fire:1417e9bcba133c9b46200323a311e359"><code>fireap fire</code></h3>
 
 <pre><code class="language-bash">fireap fire -a &lt;APP&gt; [-v &lt;VERSION&gt;] [OPTIONS]
 # To limit target node to execute the task
@@ -125,9 +123,9 @@ which is taken in the last execution.<br />
 For example, when the version last executed is <em>&ldquo;v1.0.0&rdquo;</em>, next version will be
 <em>&ldquo;v1.0.1&rdquo;</em> without <code>-v|--version</code> option.</p>
 
-<p>Read <a href="../tutorial">Getting Started</a> for more information.</p>
+<p>Read <a href="../getting-started">Getting Started</a> for more information.</p>
 
-<h3 id="fireap-clear:dc32fe45042973266ca60588597e0b66"><code>fireap clear</code></h3>
+<h3 id="fireap-clear:1417e9bcba133c9b46200323a311e359"><code>fireap clear</code></h3>
 
 <pre><code class="language-bash">fireap clear -a &lt;APP&gt; [OPTIONS]
 </code></pre>
@@ -138,7 +136,7 @@ multiple execution of a task.</p>
 <p>You do not need to run this in usual operation.<br />
 But <strong>fireap</strong> supports this subcommand for rare possibility.</p>
 
-<h3 id="fireap-reap:dc32fe45042973266ca60588597e0b66"><code>fireap reap</code></h3>
+<h3 id="fireap-reap:1417e9bcba133c9b46200323a311e359"><code>fireap reap</code></h3>
 
 <pre><code class="language-bash">fireap reap [OPTIONS]
 fireap reap --dry-run [OPTIONS]
@@ -157,10 +155,10 @@ command like followings:</p>
 <p>With <code>--dry-run</code> option, this does not execute commands set in the task but
 prints them.</p>
 
-<p>Read <a href="../tutorial">Getting Started</a> for detailed instruction to use this
+<p>Read <a href="../getting-started">Getting Started</a> for detailed instruction to use this
 as <em>Consul Watch Handler</em>.</p>
 
-<h3 id="fireap-monitor:dc32fe45042973266ca60588597e0b66"><code>fireap monitor</code></h3>
+<h3 id="fireap-monitor:1417e9bcba133c9b46200323a311e359"><code>fireap monitor</code></h3>
 
 <pre><code class="language-bash">fireap monitor -a &lt;APP&gt; [OPTIONS]
 fireap monitor -a &lt;APP&gt; --one-shot [OPTIONS]
@@ -185,20 +183,20 @@ environments).</p>
 		<div class="sidebar-toc">
 			<h4>Table of Contents</h4>
 			<ul>
-				<li><strong><a href="#title">Usage</a></strong></li>
+				<li><strong><a href="#title">CLI Usage</a></strong></li>
 			</ul>
 			<nav id="TableOfContents">
 <ul>
-<li><a href="#cli-usage:dc32fe45042973266ca60588597e0b66">CLI Usage</a>
+<li>
 <ul>
-<li><a href="#general-information:dc32fe45042973266ca60588597e0b66">General Information</a></li>
-<li><a href="#subcommands:dc32fe45042973266ca60588597e0b66">Subcommands</a>
+<li><a href="#general-information:1417e9bcba133c9b46200323a311e359">General Information</a></li>
+<li><a href="#subcommands:1417e9bcba133c9b46200323a311e359">Subcommands</a>
 <ul>
-<li><a href="#fireap-task:dc32fe45042973266ca60588597e0b66"><code>fireap task</code></a></li>
-<li><a href="#fireap-fire:dc32fe45042973266ca60588597e0b66"><code>fireap fire</code></a></li>
-<li><a href="#fireap-clear:dc32fe45042973266ca60588597e0b66"><code>fireap clear</code></a></li>
-<li><a href="#fireap-reap:dc32fe45042973266ca60588597e0b66"><code>fireap reap</code></a></li>
-<li><a href="#fireap-monitor:dc32fe45042973266ca60588597e0b66"><code>fireap monitor</code></a></li>
+<li><a href="#fireap-task:1417e9bcba133c9b46200323a311e359"><code>fireap task</code></a></li>
+<li><a href="#fireap-fire:1417e9bcba133c9b46200323a311e359"><code>fireap fire</code></a></li>
+<li><a href="#fireap-clear:1417e9bcba133c9b46200323a311e359"><code>fireap clear</code></a></li>
+<li><a href="#fireap-reap:1417e9bcba133c9b46200323a311e359"><code>fireap reap</code></a></li>
+<li><a href="#fireap-monitor:1417e9bcba133c9b46200323a311e359"><code>fireap monitor</code></a></li>
 </ul></li>
 </ul></li>
 </ul>

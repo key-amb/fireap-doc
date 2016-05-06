@@ -21,13 +21,13 @@
     
     <item>
       <title>Specification</title>
-      <link>http://key-amb.github.io/fireap-doc/spec/</link>
+      <link>http://key-amb.github.io/fireap-doc/specification/</link>
       <pubDate>Thu, 05 May 2016 11:59:13 +0900</pubDate>
       
-      <guid>http://key-amb.github.io/fireap-doc/spec/</guid>
+      <guid>http://key-amb.github.io/fireap-doc/specification/</guid>
       <description>
 
-&lt;h2 id=&#34;consul-kv-datastore:958e7270f96f5407d7d980f500805b1b&#34;&gt;Consul Kv Datastore&lt;/h2&gt;
+&lt;h2 id=&#34;consul-kv-datastore:32fe5a6c631807387f43b01824ccea9d&#34;&gt;Consul Kv Datastore&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Fireap&lt;/strong&gt; stores its working data on &lt;em&gt;Consul Kv&lt;/em&gt;.&lt;br /&gt;
 All kinds of data appear in the table below:&lt;/p&gt;
@@ -83,7 +83,7 @@ with &lt;code&gt;?cas=&lt;/code&gt; parameter to safely update the value.&lt;/li
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;references:958e7270f96f5407d7d980f500805b1b&#34;&gt;References&lt;/h2&gt;
+&lt;h2 id=&#34;references:32fe5a6c631807387f43b01824ccea9d&#34;&gt;References&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.consul.io/docs/agent/http/kv.html&#34;&gt;Key/Value store (HTTP) - Consul by HashiCorp&lt;/a&gt;&lt;/li&gt;
@@ -92,21 +92,19 @@ with &lt;code&gt;?cas=&lt;/code&gt; parameter to safely update the value.&lt;/li
     </item>
     
     <item>
-      <title>Usage</title>
-      <link>http://key-amb.github.io/fireap-doc/usage/</link>
+      <title>CLI Usage</title>
+      <link>http://key-amb.github.io/fireap-doc/cli-usage/</link>
       <pubDate>Thu, 05 May 2016 11:59:09 +0900</pubDate>
       
-      <guid>http://key-amb.github.io/fireap-doc/usage/</guid>
+      <guid>http://key-amb.github.io/fireap-doc/cli-usage/</guid>
       <description>
-
-&lt;h1 id=&#34;cli-usage:dc32fe45042973266ca60588597e0b66&#34;&gt;CLI Usage&lt;/h1&gt;
 
 &lt;p&gt;This guide shows overview of &lt;code&gt;fireap&lt;/code&gt; subcommands and typical usecases of
 &lt;code&gt;fireap&lt;/code&gt; CLI.&lt;/p&gt;
 
 &lt;p&gt;As for detailed usage of CLI, run &lt;code&gt;fireap help&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;general-information:dc32fe45042973266ca60588597e0b66&#34;&gt;General Information&lt;/h2&gt;
+&lt;h2 id=&#34;general-information:1417e9bcba133c9b46200323a311e359&#34;&gt;General Information&lt;/h2&gt;
 
 &lt;p&gt;Global options:&lt;/p&gt;
 
@@ -120,9 +118,9 @@ option.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;subcommands:dc32fe45042973266ca60588597e0b66&#34;&gt;Subcommands&lt;/h2&gt;
+&lt;h2 id=&#34;subcommands:1417e9bcba133c9b46200323a311e359&#34;&gt;Subcommands&lt;/h2&gt;
 
-&lt;h3 id=&#34;fireap-task:dc32fe45042973266ca60588597e0b66&#34;&gt;&lt;code&gt;fireap task&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;fireap-task:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap task&lt;/code&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap task [-w &amp;lt;WIDTH&amp;gt;] [OPTIONS]
 &lt;/code&gt;&lt;/pre&gt;
@@ -130,7 +128,7 @@ option.&lt;/li&gt;
 &lt;p&gt;This shows the task settings under &lt;code&gt;[task]&lt;/code&gt; sections in the configuration file.&lt;br /&gt;
 By this command, you can also check if the configuration is valid or not.&lt;/p&gt;
 
-&lt;h3 id=&#34;fireap-fire:dc32fe45042973266ca60588597e0b66&#34;&gt;&lt;code&gt;fireap fire&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;fireap-fire:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap fire&lt;/code&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap fire -a &amp;lt;APP&amp;gt; [-v &amp;lt;VERSION&amp;gt;] [OPTIONS]
 # To limit target node to execute the task
@@ -146,9 +144,9 @@ which is taken in the last execution.&lt;br /&gt;
 For example, when the version last executed is &lt;em&gt;&amp;ldquo;v1.0.0&amp;rdquo;&lt;/em&gt;, next version will be
 &lt;em&gt;&amp;ldquo;v1.0.1&amp;rdquo;&lt;/em&gt; without &lt;code&gt;-v|--version&lt;/code&gt; option.&lt;/p&gt;
 
-&lt;p&gt;Read &lt;a href=&#34;../tutorial&#34;&gt;Getting Started&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;Read &lt;a href=&#34;../getting-started&#34;&gt;Getting Started&lt;/a&gt; for more information.&lt;/p&gt;
 
-&lt;h3 id=&#34;fireap-clear:dc32fe45042973266ca60588597e0b66&#34;&gt;&lt;code&gt;fireap clear&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;fireap-clear:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap clear&lt;/code&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap clear -a &amp;lt;APP&amp;gt; [OPTIONS]
 &lt;/code&gt;&lt;/pre&gt;
@@ -159,7 +157,7 @@ multiple execution of a task.&lt;/p&gt;
 &lt;p&gt;You do not need to run this in usual operation.&lt;br /&gt;
 But &lt;strong&gt;fireap&lt;/strong&gt; supports this subcommand for rare possibility.&lt;/p&gt;
 
-&lt;h3 id=&#34;fireap-reap:dc32fe45042973266ca60588597e0b66&#34;&gt;&lt;code&gt;fireap reap&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;fireap-reap:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap reap&lt;/code&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap reap [OPTIONS]
 fireap reap --dry-run [OPTIONS]
@@ -178,10 +176,10 @@ command like followings:&lt;/p&gt;
 &lt;p&gt;With &lt;code&gt;--dry-run&lt;/code&gt; option, this does not execute commands set in the task but
 prints them.&lt;/p&gt;
 
-&lt;p&gt;Read &lt;a href=&#34;../tutorial&#34;&gt;Getting Started&lt;/a&gt; for detailed instruction to use this
+&lt;p&gt;Read &lt;a href=&#34;../getting-started&#34;&gt;Getting Started&lt;/a&gt; for detailed instruction to use this
 as &lt;em&gt;Consul Watch Handler&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;fireap-monitor:dc32fe45042973266ca60588597e0b66&#34;&gt;&lt;code&gt;fireap monitor&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;fireap-monitor:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap monitor&lt;/code&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap monitor -a &amp;lt;APP&amp;gt; [OPTIONS]
 fireap monitor -a &amp;lt;APP&amp;gt; --one-shot [OPTIONS]
@@ -198,31 +196,31 @@ environments).&lt;/p&gt;
     
     <item>
       <title>Getting Started</title>
-      <link>http://key-amb.github.io/fireap-doc/tutorial/</link>
+      <link>http://key-amb.github.io/fireap-doc/getting-started/</link>
       <pubDate>Thu, 05 May 2016 11:57:51 +0900</pubDate>
       
-      <guid>http://key-amb.github.io/fireap-doc/tutorial/</guid>
+      <guid>http://key-amb.github.io/fireap-doc/getting-started/</guid>
       <description>
 
 &lt;p&gt;This guide shows you how to install and configure &lt;strong&gt;fireap&lt;/strong&gt; to run it,
 and what is needed beforehand.&lt;/p&gt;
 
-&lt;h2 id=&#34;prerequisites:94d9a081cd1256334373c8ca6fb6276c&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;h2 id=&#34;prerequisites:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Prerequisites&lt;/h2&gt;
 
-&lt;h3 id=&#34;software-requirements:94d9a081cd1256334373c8ca6fb6276c&#34;&gt;Software Requirements&lt;/h3&gt;
+&lt;h3 id=&#34;software-requirements:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Software Requirements&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Consul v0.6.3 or later (recommended; v0.4.0 or higher is needed at least)&lt;/li&gt;
 &lt;li&gt;Ruby v2.3.0 or later (recommended, but not necessarily)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;set-up-consul-cluster:94d9a081cd1256334373c8ca6fb6276c&#34;&gt;Set up Consul Cluster&lt;/h3&gt;
+&lt;h3 id=&#34;set-up-consul-cluster:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Set up Consul Cluster&lt;/h3&gt;
 
 &lt;p&gt;Before you start with &lt;strong&gt;fireap&lt;/strong&gt;, you need a &lt;em&gt;Consul&lt;/em&gt; cluster.&lt;br /&gt;
 Please refer to documentation on &lt;a href=&#34;https://www.consul.io/docs/&#34;&gt;consul.io&lt;/a&gt;
 to set up &lt;em&gt;Consul&lt;/em&gt; cluster in your environment.&lt;/p&gt;
 
-&lt;h2 id=&#34;install:94d9a081cd1256334373c8ca6fb6276c&#34;&gt;Install&lt;/h2&gt;
+&lt;h2 id=&#34;install:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Install&lt;/h2&gt;
 
 &lt;p&gt;NOTE:&lt;/p&gt;
 
@@ -245,9 +243,9 @@ bin/fireap help
 &lt;p&gt;Instead HEAD of master branch, you can download released archives from
 &lt;a href=&#34;https://github.com/key-amb/fireap/releases&#34;&gt;https://github.com/key-amb/fireap/releases&lt;/a&gt; . It is your choice.&lt;/p&gt;
 
-&lt;h2 id=&#34;configure:94d9a081cd1256334373c8ca6fb6276c&#34;&gt;Configure&lt;/h2&gt;
+&lt;h2 id=&#34;configure:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Configure&lt;/h2&gt;
 
-&lt;h3 id=&#34;configure-fireap:94d9a081cd1256334373c8ca6fb6276c&#34;&gt;Configure &amp;ldquo;fireap&amp;rdquo;&lt;/h3&gt;
+&lt;h3 id=&#34;configure-fireap:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Configure &amp;ldquo;fireap&amp;rdquo;&lt;/h3&gt;
 
 &lt;p&gt;To run &lt;code&gt;fireap&lt;/code&gt; commands, you need a configuration file whose format is
 &lt;a href=&#34;https://github.com/toml-lang/toml&#34;&gt;TOML&lt;/a&gt;.&lt;/p&gt;
@@ -380,7 +378,7 @@ For the sample configuration above, it goes as follows:&lt;/p&gt;
 +---+--------------------------------------------------------------------------------------------+
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;configure-consul-agent:94d9a081cd1256334373c8ca6fb6276c&#34;&gt;Configure Consul Agent&lt;/h3&gt;
+&lt;h3 id=&#34;configure-consul-agent:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Configure Consul Agent&lt;/h3&gt;
 
 &lt;p&gt;Your Consul agent need to be passed &lt;code&gt;-watch&lt;/code&gt; option by command line or &lt;code&gt;watches&lt;/code&gt; parameter in your configuration file.&lt;br /&gt;
 Read &lt;a href=&#34;https://www.consul.io/docs/agent/options.html&#34;&gt;document on consul.io&lt;/a&gt; for details of agent configuration.&lt;/p&gt;
@@ -401,7 +399,7 @@ Read &lt;a href=&#34;https://www.consul.io/docs/agent/options.html&#34;&gt;docum
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;watch-handler-command:94d9a081cd1256334373c8ca6fb6276c&#34;&gt;Watch Handler Command&lt;/h4&gt;
+&lt;h4 id=&#34;watch-handler-command:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Watch Handler Command&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;&amp;lt;FIREAP HANDLER COMMAND&amp;gt;&lt;/code&gt; in the example configuration above is a watch handler in Consul.&lt;br /&gt;
 This can be any executable on your machine.&lt;/p&gt;
@@ -431,9 +429,9 @@ option to &lt;code&gt;fireap reap&lt;/code&gt; command.&lt;/p&gt;
 &lt;p&gt;After tasks are fired, you can find the task execution sequence in the log
 file on &lt;em&gt;subscriber&lt;/em&gt; nodes.&lt;/p&gt;
 
-&lt;p&gt;See &lt;a href=&#34;../usage&#34;&gt;CLI Usage&lt;/a&gt; for more information of &lt;code&gt;fireap reap&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&#34;../cli-usage&#34;&gt;CLI Usage&lt;/a&gt; for more information of &lt;code&gt;fireap reap&lt;/code&gt; command.&lt;/p&gt;
 
-&lt;h2 id=&#34;run-fireap-task:94d9a081cd1256334373c8ca6fb6276c&#34;&gt;Run &amp;ldquo;fireap&amp;rdquo; Task&lt;/h2&gt;
+&lt;h2 id=&#34;run-fireap-task:b6885e1f85551f51a4707c402f8200a3&#34;&gt;Run &amp;ldquo;fireap&amp;rdquo; Task&lt;/h2&gt;
 
 &lt;p&gt;Execute following steps on &lt;em&gt;publisher&lt;/em&gt; node to run &lt;strong&gt;fireap&lt;/strong&gt; task in the
 cluster:&lt;/p&gt;
@@ -453,9 +451,9 @@ or &lt;code&gt;bar&lt;/code&gt; can be specified in the sample configuration of 
 &lt;p&gt;&lt;code&gt;&amp;lt;VERSION&amp;gt;&lt;/code&gt; is a ascii word to indicate &lt;em&gt;version&lt;/em&gt; of the task such as
 &amp;ldquo;v1.0&amp;rdquo; or &amp;ldquo;ver-2.0.0-beta1&amp;rdquo;.&lt;/p&gt;
 
-&lt;p&gt;See &lt;a href=&#34;../usage&#34;&gt;CLI Usage&lt;/a&gt; for more information about this command.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&#34;../cli-usage&#34;&gt;CLI Usage&lt;/a&gt; for more information about this command.&lt;/p&gt;
 
-&lt;h2 id=&#34;references:94d9a081cd1256334373c8ca6fb6276c&#34;&gt;References&lt;/h2&gt;
+&lt;h2 id=&#34;references:b6885e1f85551f51a4707c402f8200a3&#34;&gt;References&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.consul.io/docs/agent/watches.html&#34;&gt;Watches - Consul by HashiCorp&lt;/a&gt;&lt;/li&gt;
@@ -480,9 +478,9 @@ of using &lt;strong&gt;fireap&lt;/strong&gt; for you.&lt;/p&gt;
 &lt;h1 id=&#34;contents:3976528693a0108357f4928017600865&#34;&gt;Contents&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;tutorial&#34;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;usage&#34;&gt;CLI Usage&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;spec&#34;&gt;Specification&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;getting-started&#34;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;cli-usage&#34;&gt;CLI Usage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;specification&#34;&gt;Specification&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;references:3976528693a0108357f4928017600865&#34;&gt;References&lt;/h1&gt;

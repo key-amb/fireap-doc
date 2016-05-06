@@ -37,13 +37,13 @@
 				
 				
 					
-					<li class="active"><a href="http://key-amb.github.io/fireap-doc/tutorial">Tutorial</a></li>
+					<li class="active"><a href="http://key-amb.github.io/fireap-doc/getting-started">Quickstart</a></li>
 				
 					
-					<li ><a href="http://key-amb.github.io/fireap-doc/usage">Usage</a></li>
+					<li ><a href="http://key-amb.github.io/fireap-doc/cli-usage">CLI</a></li>
 				
 					
-					<li ><a href="http://key-amb.github.io/fireap-doc/spec">Spec</a></li>
+					<li ><a href="http://key-amb.github.io/fireap-doc/specification">Spec</a></li>
 				
 			
 				
@@ -81,22 +81,22 @@
 <p>This guide shows you how to install and configure <strong>fireap</strong> to run it,
 and what is needed beforehand.</p>
 
-<h2 id="prerequisites:94d9a081cd1256334373c8ca6fb6276c">Prerequisites</h2>
+<h2 id="prerequisites:b6885e1f85551f51a4707c402f8200a3">Prerequisites</h2>
 
-<h3 id="software-requirements:94d9a081cd1256334373c8ca6fb6276c">Software Requirements</h3>
+<h3 id="software-requirements:b6885e1f85551f51a4707c402f8200a3">Software Requirements</h3>
 
 <ul>
 <li>Consul v0.6.3 or later (recommended; v0.4.0 or higher is needed at least)</li>
 <li>Ruby v2.3.0 or later (recommended, but not necessarily)</li>
 </ul>
 
-<h3 id="set-up-consul-cluster:94d9a081cd1256334373c8ca6fb6276c">Set up Consul Cluster</h3>
+<h3 id="set-up-consul-cluster:b6885e1f85551f51a4707c402f8200a3">Set up Consul Cluster</h3>
 
 <p>Before you start with <strong>fireap</strong>, you need a <em>Consul</em> cluster.<br />
 Please refer to documentation on <a href="https://www.consul.io/docs/">consul.io</a>
 to set up <em>Consul</em> cluster in your environment.</p>
 
-<h2 id="install:94d9a081cd1256334373c8ca6fb6276c">Install</h2>
+<h2 id="install:b6885e1f85551f51a4707c402f8200a3">Install</h2>
 
 <p>NOTE:</p>
 
@@ -119,9 +119,9 @@ bin/fireap help
 <p>Instead HEAD of master branch, you can download released archives from
 <a href="https://github.com/key-amb/fireap/releases">https://github.com/key-amb/fireap/releases</a> . It is your choice.</p>
 
-<h2 id="configure:94d9a081cd1256334373c8ca6fb6276c">Configure</h2>
+<h2 id="configure:b6885e1f85551f51a4707c402f8200a3">Configure</h2>
 
-<h3 id="configure-fireap:94d9a081cd1256334373c8ca6fb6276c">Configure &ldquo;fireap&rdquo;</h3>
+<h3 id="configure-fireap:b6885e1f85551f51a4707c402f8200a3">Configure &ldquo;fireap&rdquo;</h3>
 
 <p>To run <code>fireap</code> commands, you need a configuration file whose format is
 <a href="https://github.com/toml-lang/toml">TOML</a>.</p>
@@ -254,7 +254,7 @@ For the sample configuration above, it goes as follows:</p>
 +---+--------------------------------------------------------------------------------------------+
 </code></pre>
 
-<h3 id="configure-consul-agent:94d9a081cd1256334373c8ca6fb6276c">Configure Consul Agent</h3>
+<h3 id="configure-consul-agent:b6885e1f85551f51a4707c402f8200a3">Configure Consul Agent</h3>
 
 <p>Your Consul agent need to be passed <code>-watch</code> option by command line or <code>watches</code> parameter in your configuration file.<br />
 Read <a href="https://www.consul.io/docs/agent/options.html">document on consul.io</a> for details of agent configuration.</p>
@@ -275,7 +275,7 @@ Read <a href="https://www.consul.io/docs/agent/options.html">document on consul.
 }
 </code></pre>
 
-<h4 id="watch-handler-command:94d9a081cd1256334373c8ca6fb6276c">Watch Handler Command</h4>
+<h4 id="watch-handler-command:b6885e1f85551f51a4707c402f8200a3">Watch Handler Command</h4>
 
 <p><code>&lt;FIREAP HANDLER COMMAND&gt;</code> in the example configuration above is a watch handler in Consul.<br />
 This can be any executable on your machine.</p>
@@ -305,9 +305,9 @@ option to <code>fireap reap</code> command.</p>
 <p>After tasks are fired, you can find the task execution sequence in the log
 file on <em>subscriber</em> nodes.</p>
 
-<p>See <a href="../usage">CLI Usage</a> for more information of <code>fireap reap</code> command.</p>
+<p>See <a href="../cli-usage">CLI Usage</a> for more information of <code>fireap reap</code> command.</p>
 
-<h2 id="run-fireap-task:94d9a081cd1256334373c8ca6fb6276c">Run &ldquo;fireap&rdquo; Task</h2>
+<h2 id="run-fireap-task:b6885e1f85551f51a4707c402f8200a3">Run &ldquo;fireap&rdquo; Task</h2>
 
 <p>Execute following steps on <em>publisher</em> node to run <strong>fireap</strong> task in the
 cluster:</p>
@@ -327,9 +327,9 @@ or <code>bar</code> can be specified in the sample configuration of this documen
 <p><code>&lt;VERSION&gt;</code> is a ascii word to indicate <em>version</em> of the task such as
 &ldquo;v1.0&rdquo; or &ldquo;ver-2.0.0-beta1&rdquo;.</p>
 
-<p>See <a href="../usage">CLI Usage</a> for more information about this command.</p>
+<p>See <a href="../cli-usage">CLI Usage</a> for more information about this command.</p>
 
-<h2 id="references:94d9a081cd1256334373c8ca6fb6276c">References</h2>
+<h2 id="references:b6885e1f85551f51a4707c402f8200a3">References</h2>
 
 <ul>
 <li><a href="https://www.consul.io/docs/agent/watches.html">Watches - Consul by HashiCorp</a></li>
@@ -353,22 +353,22 @@ or <code>bar</code> can be specified in the sample configuration of this documen
 <ul>
 <li>
 <ul>
-<li><a href="#prerequisites:94d9a081cd1256334373c8ca6fb6276c">Prerequisites</a>
+<li><a href="#prerequisites:b6885e1f85551f51a4707c402f8200a3">Prerequisites</a>
 <ul>
-<li><a href="#software-requirements:94d9a081cd1256334373c8ca6fb6276c">Software Requirements</a></li>
-<li><a href="#set-up-consul-cluster:94d9a081cd1256334373c8ca6fb6276c">Set up Consul Cluster</a></li>
+<li><a href="#software-requirements:b6885e1f85551f51a4707c402f8200a3">Software Requirements</a></li>
+<li><a href="#set-up-consul-cluster:b6885e1f85551f51a4707c402f8200a3">Set up Consul Cluster</a></li>
 </ul></li>
-<li><a href="#install:94d9a081cd1256334373c8ca6fb6276c">Install</a></li>
-<li><a href="#configure:94d9a081cd1256334373c8ca6fb6276c">Configure</a>
+<li><a href="#install:b6885e1f85551f51a4707c402f8200a3">Install</a></li>
+<li><a href="#configure:b6885e1f85551f51a4707c402f8200a3">Configure</a>
 <ul>
-<li><a href="#configure-fireap:94d9a081cd1256334373c8ca6fb6276c">Configure &ldquo;fireap&rdquo;</a></li>
-<li><a href="#configure-consul-agent:94d9a081cd1256334373c8ca6fb6276c">Configure Consul Agent</a>
+<li><a href="#configure-fireap:b6885e1f85551f51a4707c402f8200a3">Configure &ldquo;fireap&rdquo;</a></li>
+<li><a href="#configure-consul-agent:b6885e1f85551f51a4707c402f8200a3">Configure Consul Agent</a>
 <ul>
-<li><a href="#watch-handler-command:94d9a081cd1256334373c8ca6fb6276c">Watch Handler Command</a></li>
+<li><a href="#watch-handler-command:b6885e1f85551f51a4707c402f8200a3">Watch Handler Command</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#run-fireap-task:94d9a081cd1256334373c8ca6fb6276c">Run &ldquo;fireap&rdquo; Task</a></li>
-<li><a href="#references:94d9a081cd1256334373c8ca6fb6276c">References</a></li>
+<li><a href="#run-fireap-task:b6885e1f85551f51a4707c402f8200a3">Run &ldquo;fireap&rdquo; Task</a></li>
+<li><a href="#references:b6885e1f85551f51a4707c402f8200a3">References</a></li>
 </ul></li>
 </ul>
 </nav>
