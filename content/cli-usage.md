@@ -2,11 +2,9 @@
 categories = ["general"]
 date = "2016-05-05T11:59:09+09:00"
 tags = ["document"]
-title = "Usage"
+title = "CLI Usage"
 
 +++
-
-# CLI Usage
 
 This guide shows overview of `fireap` subcommands and typical usecases of
 `fireap` CLI.
@@ -50,7 +48,7 @@ which is taken in the last execution.
 For example, when the version last executed is _"v1.0.0"_, next version will be
 _"v1.0.1"_ without `-v|--version` option.
 
-Read [Getting Started](../tutorial) for more information.
+Read [Getting Started](../getting-started) for more information.
 
 ### `fireap clear`
 
@@ -85,7 +83,7 @@ curl http://localhost:8500/v1/event/list | fireap reap [--dry-run] [OPTIONS]
 With `--dry-run` option, this does not execute commands set in the task but
 prints them.
 
-Read [Getting Started](../tutorial) for detailed instruction to use this
+Read [Getting Started](../getting-started) for detailed instruction to use this
 as _Consul Watch Handler_.
 
 ### `fireap monitor`

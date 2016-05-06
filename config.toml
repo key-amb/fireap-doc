@@ -7,8 +7,19 @@ copyright = "Copyright (c) 2016, YASUTAKE Kiyoshi; All rights reserved."
 [params]
   description = "(fire + reap) Fast task runner on Consul cluster"
   #withSitePosts = true
-  mainMenu = ["tutorial", "usage", "spec"]
   searchDomain = "key-amb.github.io/fireap-doc"
   noCategoryLink = true
   repositoryUrl = "https://github.com/key-amb/fireap/"
   highlightStyle = "atelier-forest-dark"
+
+[[params.mainMenu]]
+  name = "Quickstart"
+  link = "getting-started"
+
+[[params.mainMenu]]
+  name = "CLI"
+  link = "cli-usage"
+
+[[params.mainMenu]]
+  name = "Spec"
+  link = "specification"

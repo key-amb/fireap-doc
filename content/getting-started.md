@@ -213,7 +213,7 @@ option to `fireap reap` command.
 After tasks are fired, you can find the task execution sequence in the log
 file on _subscriber_ nodes.
 
-See [CLI Usage](../usage) for more information of `fireap reap` command.
+See [CLI Usage](../cli-usage) for more information of `fireap reap` command.
 
 ## Run "fireap" Task
 
@@ -234,7 +234,7 @@ or `bar` can be specified in the sample configuration of this document.
 `<VERSION>` is a ascii word to indicate _version_ of the task such as
 "v1.0" or "ver-2.0.0-beta1".
 
-See [CLI Usage](../usage) for more information about this command.
+See [CLI Usage](../cli-usage) for more information about this command.
 
 ## References
 

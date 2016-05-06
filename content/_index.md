@@ -12,9 +12,9 @@ of using **fireap** for you.
 
 # Contents
 
-- [Getting Started](tutorial)
-- [CLI Usage](usage)
-- [Specification](spec)
+- [Getting Started](getting-started)
+- [CLI Usage](cli-usage)
+- [Specification](specification)
 
 # References
 
