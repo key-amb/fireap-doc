@@ -7,183 +7,8 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2016, YASUTAKE Kiyoshi; All rights reserved.</copyright>
-    <lastBuildDate>Thu, 05 May 2016 11:59:13 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 05 May 2016 11:57:51 +0900</lastBuildDate>
     <atom:link href="http://key-amb.github.io/fireap-doc/categories/general/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Specification</title>
-      <link>http://key-amb.github.io/fireap-doc/specification/</link>
-      <pubDate>Thu, 05 May 2016 11:59:13 +0900</pubDate>
-      
-      <guid>http://key-amb.github.io/fireap-doc/specification/</guid>
-      <description>
-
-&lt;h2 id=&#34;consul-kv-datastore:32fe5a6c631807387f43b01824ccea9d&#34;&gt;Consul Kv Datastore&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Fireap&lt;/strong&gt; stores its working data on &lt;em&gt;Consul Kv&lt;/em&gt;.&lt;br /&gt;
-All kinds of data appear in the table below:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;path&lt;/th&gt;
-&lt;th&gt;data type&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;fireap/&amp;lt;app&amp;gt;/lock&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;String&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Task execution lock to avoid multiple execution at the same time&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;fireap/&amp;lt;app&amp;gt;/nodes/&amp;lt;node&amp;gt;/version&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;String&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Last executed task version on &lt;code&gt;&amp;lt;node&amp;gt;&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;fireap/&amp;lt;app&amp;gt;/nodes/&amp;lt;node&amp;gt;/semaphore&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Integer&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;How many &lt;em&gt;subscribers&lt;/em&gt; are acceptable for &lt;code&gt;&amp;lt;node&amp;gt;&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;fireap/&amp;lt;app&amp;gt;/nodes/&amp;lt;node&amp;gt;/update_info&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;JSON&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Includes date when last task execution completed and from which host &lt;code&gt;&amp;lt;node&amp;gt;&lt;/code&gt; &amp;ldquo;pulled&amp;rdquo; the update&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Here are some supplementary information:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Fireap&lt;/strong&gt; does not memorize version history but only last executed version.&lt;/li&gt;
-&lt;li&gt;When a &lt;em&gt;subscriber&lt;/em&gt; &amp;ldquo;pulls&amp;rdquo; updates from a remote node, it decrements the
-&lt;code&gt;semaphore&lt;/code&gt; number of the remote node. This reduction is done by Consul HTTP API
-with &lt;code&gt;?cas=&lt;/code&gt; parameter to safely update the value.&lt;/li&gt;
-&lt;li&gt;Format of &lt;code&gt;update_info&lt;/code&gt; goes like below:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;{&amp;quot;updated_at&amp;quot;:&amp;quot;2016-03-20 22:24:09 +0900&amp;quot;,&amp;quot;remote_node&amp;quot;:&amp;quot;xxx01&amp;quot;}&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;This data is only for &lt;code&gt;monitor&lt;/code&gt; use.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;references:32fe5a6c631807387f43b01824ccea9d&#34;&gt;References&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.consul.io/docs/agent/http/kv.html&#34;&gt;Key/Value store (HTTP) - Consul by HashiCorp&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>CLI Usage</title>
-      <link>http://key-amb.github.io/fireap-doc/cli-usage/</link>
-      <pubDate>Thu, 05 May 2016 11:59:09 +0900</pubDate>
-      
-      <guid>http://key-amb.github.io/fireap-doc/cli-usage/</guid>
-      <description>
-
-&lt;p&gt;This guide shows overview of &lt;code&gt;fireap&lt;/code&gt; subcommands and typical usecases of
-&lt;code&gt;fireap&lt;/code&gt; CLI.&lt;/p&gt;
-
-&lt;p&gt;As for detailed usage of CLI, run &lt;code&gt;fireap help&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;general-information:1417e9bcba133c9b46200323a311e359&#34;&gt;General Information&lt;/h2&gt;
-
-&lt;p&gt;Global options:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;-c|--config=/path/to/config.toml&lt;/code&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Option to specify path of configuration file.&lt;/li&gt;
-&lt;li&gt;When you set &lt;code&gt;$FIREAP_CONFIG_PATH&lt;/code&gt; environment variable, you can omit this
-option.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;subcommands:1417e9bcba133c9b46200323a311e359&#34;&gt;Subcommands&lt;/h2&gt;
-
-&lt;h3 id=&#34;fireap-task:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap task&lt;/code&gt;&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap task [-w &amp;lt;WIDTH&amp;gt;] [OPTIONS]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This shows the task settings under &lt;code&gt;[task]&lt;/code&gt; sections in the configuration file.&lt;br /&gt;
-By this command, you can also check if the configuration is valid or not.&lt;/p&gt;
-
-&lt;h3 id=&#34;fireap-fire:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap fire&lt;/code&gt;&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap fire -a &amp;lt;APP&amp;gt; [-v &amp;lt;VERSION&amp;gt;] [OPTIONS]
-# To limit target node to execute the task
-fireap fire -a &amp;lt;APP&amp;gt; --node-name|-n=&amp;lt;NODE_NAME&amp;gt; [-v &amp;lt;VERSION&amp;gt;] [OPTIONS]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This fires a &lt;strong&gt;fireap&lt;/strong&gt; task propagation.&lt;/p&gt;
-
-&lt;p&gt;If you omit &lt;code&gt;-v|--version=&amp;lt;VERSION&amp;gt;&lt;/code&gt; option, &lt;strong&gt;fireap&lt;/strong&gt; start with version &lt;em&gt;&amp;ldquo;1&amp;rdquo;&lt;/em&gt;
-if it is the first execution.
-When you have already executed the task, &lt;strong&gt;fireap&lt;/strong&gt; increments the version
-which is taken in the last execution.&lt;br /&gt;
-For example, when the version last executed is &lt;em&gt;&amp;ldquo;v1.0.0&amp;rdquo;&lt;/em&gt;, next version will be
-&lt;em&gt;&amp;ldquo;v1.0.1&amp;rdquo;&lt;/em&gt; without &lt;code&gt;-v|--version&lt;/code&gt; option.&lt;/p&gt;
-
-&lt;p&gt;Read &lt;a href=&#34;../getting-started&#34;&gt;Getting Started&lt;/a&gt; for more information.&lt;/p&gt;
-
-&lt;h3 id=&#34;fireap-clear:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap clear&lt;/code&gt;&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap clear -a &amp;lt;APP&amp;gt; [OPTIONS]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;fireap fire&lt;/code&gt; holds lock for each &lt;code&gt;&amp;lt;APP&amp;gt;&lt;/code&gt; during the command execution to avoid
-multiple execution of a task.&lt;/p&gt;
-
-&lt;p&gt;You do not need to run this in usual operation.&lt;br /&gt;
-But &lt;strong&gt;fireap&lt;/strong&gt; supports this subcommand for rare possibility.&lt;/p&gt;
-
-&lt;h3 id=&#34;fireap-reap:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap reap&lt;/code&gt;&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap reap [OPTIONS]
-fireap reap --dry-run [OPTIONS]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This receives contents of &lt;em&gt;Consul Event&lt;/em&gt; from STDIN, then executes configured
-task.&lt;br /&gt;
-It is supposed to be used as &lt;em&gt;watch handler&lt;/em&gt; of &lt;em&gt;consul agent&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;However, if you want to check how this works preliminarily, you can do it by
-command like followings:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl http://localhost:8500/v1/event/list | fireap reap [--dry-run] [OPTIONS]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;With &lt;code&gt;--dry-run&lt;/code&gt; option, this does not execute commands set in the task but
-prints them.&lt;/p&gt;
-
-&lt;p&gt;Read &lt;a href=&#34;../getting-started&#34;&gt;Getting Started&lt;/a&gt; for detailed instruction to use this
-as &lt;em&gt;Consul Watch Handler&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;fireap-monitor:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap monitor&lt;/code&gt;&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap monitor -a &amp;lt;APP&amp;gt; [OPTIONS]
-fireap monitor -a &amp;lt;APP&amp;gt; --one-shot [OPTIONS]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This shows data in &lt;em&gt;Consul Kv&lt;/em&gt; related to &lt;code&gt;&amp;lt;APP&amp;gt;&lt;/code&gt;.&lt;br /&gt;
-You can check task propagation by this.&lt;/p&gt;
-
-&lt;p&gt;Without &lt;code&gt;-o|--one-shot&lt;/code&gt; option, it continuously shows the data until it
-receives &lt;code&gt;INT&lt;/code&gt; signal (corresponds to &lt;code&gt;Ctrl-C&lt;/code&gt; in many terminal
-environments).&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Getting Started</title>
@@ -448,6 +273,181 @@ or &lt;code&gt;bar&lt;/code&gt; can be specified in the sample configuration of 
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.consul.io/docs/agent/watches.html&#34;&gt;Watches - Consul by HashiCorp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CLI Usage</title>
+      <link>http://key-amb.github.io/fireap-doc/cli-usage/</link>
+      <pubDate>Thu, 05 May 2016 11:59:09 +0900</pubDate>
+      
+      <guid>http://key-amb.github.io/fireap-doc/cli-usage/</guid>
+      <description>
+
+&lt;p&gt;This guide shows overview of &lt;code&gt;fireap&lt;/code&gt; subcommands and typical usecases of
+&lt;code&gt;fireap&lt;/code&gt; CLI.&lt;/p&gt;
+
+&lt;p&gt;As for detailed usage of CLI, run &lt;code&gt;fireap help&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;general-information:1417e9bcba133c9b46200323a311e359&#34;&gt;General Information&lt;/h2&gt;
+
+&lt;p&gt;Global options:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-c|--config=/path/to/config.toml&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Option to specify path of configuration file.&lt;/li&gt;
+&lt;li&gt;When you set &lt;code&gt;$FIREAP_CONFIG_PATH&lt;/code&gt; environment variable, you can omit this
+option.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;subcommands:1417e9bcba133c9b46200323a311e359&#34;&gt;Subcommands&lt;/h2&gt;
+
+&lt;h3 id=&#34;fireap-task:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap task&lt;/code&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap task [-w &amp;lt;WIDTH&amp;gt;] [OPTIONS]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This shows the task settings under &lt;code&gt;[task]&lt;/code&gt; sections in the configuration file.&lt;br /&gt;
+By this command, you can also check if the configuration is valid or not.&lt;/p&gt;
+
+&lt;h3 id=&#34;fireap-fire:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap fire&lt;/code&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap fire -a &amp;lt;APP&amp;gt; [-v &amp;lt;VERSION&amp;gt;] [OPTIONS]
+# To limit target node to execute the task
+fireap fire -a &amp;lt;APP&amp;gt; --node-name|-n=&amp;lt;NODE_NAME&amp;gt; [-v &amp;lt;VERSION&amp;gt;] [OPTIONS]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This fires a &lt;strong&gt;fireap&lt;/strong&gt; task propagation.&lt;/p&gt;
+
+&lt;p&gt;If you omit &lt;code&gt;-v|--version=&amp;lt;VERSION&amp;gt;&lt;/code&gt; option, &lt;strong&gt;fireap&lt;/strong&gt; start with version &lt;em&gt;&amp;ldquo;1&amp;rdquo;&lt;/em&gt;
+if it is the first execution.
+When you have already executed the task, &lt;strong&gt;fireap&lt;/strong&gt; increments the version
+which is taken in the last execution.&lt;br /&gt;
+For example, when the version last executed is &lt;em&gt;&amp;ldquo;v1.0.0&amp;rdquo;&lt;/em&gt;, next version will be
+&lt;em&gt;&amp;ldquo;v1.0.1&amp;rdquo;&lt;/em&gt; without &lt;code&gt;-v|--version&lt;/code&gt; option.&lt;/p&gt;
+
+&lt;p&gt;Read &lt;a href=&#34;../getting-started&#34;&gt;Getting Started&lt;/a&gt; for more information.&lt;/p&gt;
+
+&lt;h3 id=&#34;fireap-clear:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap clear&lt;/code&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap clear -a &amp;lt;APP&amp;gt; [OPTIONS]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;fireap fire&lt;/code&gt; holds lock for each &lt;code&gt;&amp;lt;APP&amp;gt;&lt;/code&gt; during the command execution to avoid
+multiple execution of a task.&lt;/p&gt;
+
+&lt;p&gt;You do not need to run this in usual operation.&lt;br /&gt;
+But &lt;strong&gt;fireap&lt;/strong&gt; supports this subcommand for rare possibility.&lt;/p&gt;
+
+&lt;h3 id=&#34;fireap-reap:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap reap&lt;/code&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap reap [OPTIONS]
+fireap reap --dry-run [OPTIONS]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This receives contents of &lt;em&gt;Consul Event&lt;/em&gt; from STDIN, then executes configured
+task.&lt;br /&gt;
+It is supposed to be used as &lt;em&gt;watch handler&lt;/em&gt; of &lt;em&gt;consul agent&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, if you want to check how this works preliminarily, you can do it by
+command like followings:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl http://localhost:8500/v1/event/list | fireap reap [--dry-run] [OPTIONS]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With &lt;code&gt;--dry-run&lt;/code&gt; option, this does not execute commands set in the task but
+prints them.&lt;/p&gt;
+
+&lt;p&gt;Read &lt;a href=&#34;../getting-started&#34;&gt;Getting Started&lt;/a&gt; for detailed instruction to use this
+as &lt;em&gt;Consul Watch Handler&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;fireap-monitor:1417e9bcba133c9b46200323a311e359&#34;&gt;&lt;code&gt;fireap monitor&lt;/code&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fireap monitor -a &amp;lt;APP&amp;gt; [OPTIONS]
+fireap monitor -a &amp;lt;APP&amp;gt; --one-shot [OPTIONS]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This shows data in &lt;em&gt;Consul Kv&lt;/em&gt; related to &lt;code&gt;&amp;lt;APP&amp;gt;&lt;/code&gt;.&lt;br /&gt;
+You can check task propagation by this.&lt;/p&gt;
+
+&lt;p&gt;Without &lt;code&gt;-o|--one-shot&lt;/code&gt; option, it continuously shows the data until it
+receives &lt;code&gt;INT&lt;/code&gt; signal (corresponds to &lt;code&gt;Ctrl-C&lt;/code&gt; in many terminal
+environments).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Specification</title>
+      <link>http://key-amb.github.io/fireap-doc/specification/</link>
+      <pubDate>Thu, 05 May 2016 11:59:13 +0900</pubDate>
+      
+      <guid>http://key-amb.github.io/fireap-doc/specification/</guid>
+      <description>
+
+&lt;h2 id=&#34;consul-kv-datastore:32fe5a6c631807387f43b01824ccea9d&#34;&gt;Consul Kv Datastore&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Fireap&lt;/strong&gt; stores its working data on &lt;em&gt;Consul Kv&lt;/em&gt;.&lt;br /&gt;
+All kinds of data appear in the table below:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;path&lt;/th&gt;
+&lt;th&gt;data type&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;fireap/&amp;lt;app&amp;gt;/lock&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Task execution lock to avoid multiple execution at the same time&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;fireap/&amp;lt;app&amp;gt;/nodes/&amp;lt;node&amp;gt;/version&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Last executed task version on &lt;code&gt;&amp;lt;node&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;fireap/&amp;lt;app&amp;gt;/nodes/&amp;lt;node&amp;gt;/semaphore&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Integer&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;How many &lt;em&gt;subscribers&lt;/em&gt; are acceptable for &lt;code&gt;&amp;lt;node&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;fireap/&amp;lt;app&amp;gt;/nodes/&amp;lt;node&amp;gt;/update_info&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;JSON&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Includes date when last task execution completed and from which host &lt;code&gt;&amp;lt;node&amp;gt;&lt;/code&gt; &amp;ldquo;pulled&amp;rdquo; the update&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Here are some supplementary information:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fireap&lt;/strong&gt; does not memorize version history but only last executed version.&lt;/li&gt;
+&lt;li&gt;When a &lt;em&gt;subscriber&lt;/em&gt; &amp;ldquo;pulls&amp;rdquo; updates from a remote node, it decrements the
+&lt;code&gt;semaphore&lt;/code&gt; number of the remote node. This reduction is done by Consul HTTP API
+with &lt;code&gt;?cas=&lt;/code&gt; parameter to safely update the value.&lt;/li&gt;
+&lt;li&gt;Format of &lt;code&gt;update_info&lt;/code&gt; goes like below:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;{&amp;quot;updated_at&amp;quot;:&amp;quot;2016-03-20 22:24:09 +0900&amp;quot;,&amp;quot;remote_node&amp;quot;:&amp;quot;xxx01&amp;quot;}&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;This data is only for &lt;code&gt;monitor&lt;/code&gt; use.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;references:32fe5a6c631807387f43b01824ccea9d&#34;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.consul.io/docs/agent/http/kv.html&#34;&gt;Key/Value store (HTTP) - Consul by HashiCorp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

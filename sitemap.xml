@@ -13,13 +13,8 @@
   </url>
   
   <url>
-    <loc>http://key-amb.github.io/fireap-doc/specification/</loc>
-    <lastmod>2016-05-05T11:59:13+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://key-amb.github.io/fireap-doc/cli-usage/</loc>
-    <lastmod>2016-05-05T11:59:09+09:00</lastmod>
+    <loc>http://key-amb.github.io/fireap-doc/_index/</loc>
+    <lastmod>2016-05-05T11:57:04+09:00</lastmod>
   </url>
   
   <url>
@@ -28,8 +23,13 @@
   </url>
   
   <url>
-    <loc>http://key-amb.github.io/fireap-doc/_index/</loc>
-    <lastmod>2016-05-05T11:57:04+09:00</lastmod>
+    <loc>http://key-amb.github.io/fireap-doc/cli-usage/</loc>
+    <lastmod>2016-05-05T11:59:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://key-amb.github.io/fireap-doc/specification/</loc>
+    <lastmod>2016-05-05T11:59:13+09:00</lastmod>
   </url>
   
 </urlset>
