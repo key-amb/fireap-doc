@@ -1,6 +1,7 @@
 +++
 categories = ["general"]
 date = "2016-05-05T11:59:09+09:00"
+weight = 210
 tags = ["document"]
 title = "CLI Usage"
 

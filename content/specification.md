@@ -1,6 +1,7 @@
 +++
 categories = ["general"]
 date = "2016-05-05T11:59:13+09:00"
+weight = 220
 tags = ["document"]
 title = "Specification"
 
