@@ -245,6 +245,10 @@ ul.sidebar-category-list > li > ul > li {
   font-size: 14px;
   font-style: normal;
 }
+ul.sidebar-category-list > li > ul > li > span.active {
+  color: #999;
+  font-weight: 500;
+}
 
 .tag-box {
   padding: 10px 15px;
