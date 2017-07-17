@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="alternate" href="/index.xml" type="application/rss+xml" title="fireap">
-		<link rel="icon" href="http://key-amb.github.io/fireap-doc/favicon.ico">
+		<link rel="icon" href="https://progrhyme.github.io/fireap-doc/favicon.ico">
 		<title>Getting Started - fireap</title>
 		
-		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/highlight/atelier-forest-dark.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/bootstrap.min.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/theme.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/bootie-docs.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/fireap-doc/css/highlight/atelier-forest-dark.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/fireap-doc/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/fireap-doc/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/fireap-doc/css/theme.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/fireap-doc/css/bootie-docs.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/fireap-doc/css/site.css">
 	</head>
 
 <body role="document">
@@ -28,22 +28,19 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="http://key-amb.github.io/fireap-doc/">fireap</a>
+				<a class="navbar-brand" href="https://progrhyme.github.io/fireap-doc/">fireap</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li ><a href="http://key-amb.github.io/fireap-doc/">Home</a></li>
+					<li ><a href="https://progrhyme.github.io/fireap-doc/">Home</a></li>
+			
 			
 				
+					<li class="active"><a href="/fireap-doc/getting-started/">Quickstart</a></li>
 				
-					
-					<li class="active"><a href="http://key-amb.github.io/fireap-doc/getting-started">Quickstart</a></li>
+					<li ><a href="/fireap-doc/cli-usage/">CLI</a></li>
 				
-					
-					<li ><a href="http://key-amb.github.io/fireap-doc/cli-usage">CLI</a></li>
-				
-					
-					<li ><a href="http://key-amb.github.io/fireap-doc/specification">Spec</a></li>
+					<li ><a href="/fireap-doc/specification/">Spec</a></li>
 				
 			
 				
@@ -51,7 +48,7 @@
 				
 				<form class="navbar-form navbar-left" role="search" action="https://www.google.co.jp/search" method="get">
 					<div class="input-group doc-search-form">
-						<input type="hidden" name="as_sitesearch" value="key-amb.github.io/fireap-doc">
+						<input type="hidden" name="as_sitesearch" value="progrhyme.github.io/fireap-doc">
 						<input type="text" name="as_q" class="search-query doc-search-input-text" placeholder="Search Site">
 						<span class="input-group-addon input-group-btn doc-search-input-btn">
 							<button class="btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
@@ -81,22 +78,22 @@
 <p>This guide shows you how to install and configure <strong>fireap</strong> to run it,
 and what is needed beforehand.</p>
 
-<h2 id="prerequisites:b6885e1f85551f51a4707c402f8200a3">Prerequisites</h2>
+<h2 id="prerequisites">Prerequisites</h2>
 
-<h3 id="software-requirements:b6885e1f85551f51a4707c402f8200a3">Software Requirements</h3>
+<h3 id="software-requirements">Software Requirements</h3>
 
 <ul>
 <li>Consul v0.6.3 or later (recommended; v0.4.0 or higher is needed at least)</li>
 <li>Ruby v2.3.0 or later (recommended, but not necessarily)</li>
 </ul>
 
-<h3 id="set-up-consul-cluster:b6885e1f85551f51a4707c402f8200a3">Set up Consul Cluster</h3>
+<h3 id="set-up-consul-cluster">Set up Consul Cluster</h3>
 
 <p>Before you start with <strong>fireap</strong>, you need a <em>Consul</em> cluster.<br />
 Please refer to documentation on <a href="https://www.consul.io/docs/">consul.io</a>
 to set up <em>Consul</em> cluster in your environment.</p>
 
-<h2 id="install:b6885e1f85551f51a4707c402f8200a3">Install</h2>
+<h2 id="install">Install</h2>
 
 <p>NOTE:</p>
 
@@ -107,7 +104,7 @@ to set up <em>Consul</em> cluster in your environment.</p>
 <strong>fireap</strong> tasks will be executed.</li>
 </ul>
 
-<pre><code>git clone https://github.com/key-amb/fireap.git
+<pre><code>git clone https://github.com/progrhyme/fireap.git
 cd fireap
 # Install ruby gems in depend. Install &quot;bundler&quot; gem beforehand.
 bundle install
@@ -117,11 +114,11 @@ bin/fireap help
 <p>If last command successfully shows the CLI usage, <strong>fireap</strong> is ready for you.</p>
 
 <p>Instead HEAD of master branch, you can download released archives from
-<a href="https://github.com/key-amb/fireap/releases">https://github.com/key-amb/fireap/releases</a> . It is your choice.</p>
+<a href="https://github.com/progrhyme/fireap/releases">https://github.com/progrhyme/fireap/releases</a> . It is your choice.</p>
 
-<h2 id="configure:b6885e1f85551f51a4707c402f8200a3">Configure</h2>
+<h2 id="configure">Configure</h2>
 
-<h3 id="configure-fireap:b6885e1f85551f51a4707c402f8200a3">Configure &ldquo;fireap&rdquo;</h3>
+<h3 id="configure-fireap">Configure &ldquo;fireap&rdquo;</h3>
 
 <p>To run <code>fireap</code> commands, you need a configuration file whose format is
 <a href="https://github.com/toml-lang/toml">TOML</a>.</p>
@@ -195,7 +192,7 @@ after_commands = []
 <p>Some of configurations are commented out in this snippet.
 You can enable it by uncommenting.</p>
 
-<p>You find a sample in <a href="https://github.com/key-amb/fireap/blob/master/config/sample.toml">config/sample.toml</a>
+<p>You find a sample in <a href="https://github.com/progrhyme/fireap/blob/master/config/sample.toml">config/sample.toml</a>
 in this repository, which is similar to the one above.</p>
 
 <p>Here are supplementary explanations:</p>
@@ -254,7 +251,7 @@ For the sample configuration above, it goes as follows:</p>
 +---+--------------------------------------------------------------------------------------------+
 </code></pre>
 
-<h3 id="configure-consul-agent:b6885e1f85551f51a4707c402f8200a3">Configure Consul Agent</h3>
+<h3 id="configure-consul-agent">Configure Consul Agent</h3>
 
 <p>Your Consul agent need to be passed <code>-watch</code> option by command line or <code>watches</code> parameter in your configuration file.<br />
 Read <a href="https://www.consul.io/docs/agent/options.html">document on consul.io</a> for details of agent configuration.</p>
@@ -275,7 +272,7 @@ Read <a href="https://www.consul.io/docs/agent/options.html">document on consul.
 }
 </code></pre>
 
-<h4 id="watch-handler-command:b6885e1f85551f51a4707c402f8200a3">Watch Handler Command</h4>
+<h4 id="watch-handler-command">Watch Handler Command</h4>
 
 <p><code>&lt;FIREAP HANDLER COMMAND&gt;</code> in the example configuration above is a watch handler in Consul.<br />
 This can be any executable on your machine.</p>
@@ -307,7 +304,7 @@ file on <em>subscriber</em> nodes.</p>
 
 <p>See <a href="../cli-usage">CLI Usage</a> for more information of <code>fireap reap</code> command.</p>
 
-<h2 id="run-fireap-task:b6885e1f85551f51a4707c402f8200a3">Run &ldquo;fireap&rdquo; Task</h2>
+<h2 id="run-fireap-task">Run &ldquo;fireap&rdquo; Task</h2>
 
 <p>Execute following steps on <em>publisher</em> node to run <strong>fireap</strong> task in the
 cluster:</p>
@@ -329,7 +326,7 @@ or <code>bar</code> can be specified in the sample configuration of this documen
 
 <p>See <a href="../cli-usage">CLI Usage</a> for more information about this command.</p>
 
-<h2 id="references:b6885e1f85551f51a4707c402f8200a3">References</h2>
+<h2 id="references">References</h2>
 
 <ul>
 <li><a href="https://www.consul.io/docs/agent/watches.html">Watches - Consul by HashiCorp</a></li>
@@ -354,22 +351,22 @@ or <code>bar</code> can be specified in the sample configuration of this documen
 <ul>
 <li>
 <ul>
-<li><a href="#prerequisites:b6885e1f85551f51a4707c402f8200a3">Prerequisites</a>
+<li><a href="#prerequisites">Prerequisites</a>
 <ul>
-<li><a href="#software-requirements:b6885e1f85551f51a4707c402f8200a3">Software Requirements</a></li>
-<li><a href="#set-up-consul-cluster:b6885e1f85551f51a4707c402f8200a3">Set up Consul Cluster</a></li>
+<li><a href="#software-requirements">Software Requirements</a></li>
+<li><a href="#set-up-consul-cluster">Set up Consul Cluster</a></li>
 </ul></li>
-<li><a href="#install:b6885e1f85551f51a4707c402f8200a3">Install</a></li>
-<li><a href="#configure:b6885e1f85551f51a4707c402f8200a3">Configure</a>
+<li><a href="#install">Install</a></li>
+<li><a href="#configure">Configure</a>
 <ul>
-<li><a href="#configure-fireap:b6885e1f85551f51a4707c402f8200a3">Configure &ldquo;fireap&rdquo;</a></li>
-<li><a href="#configure-consul-agent:b6885e1f85551f51a4707c402f8200a3">Configure Consul Agent</a>
+<li><a href="#configure-fireap">Configure &ldquo;fireap&rdquo;</a></li>
+<li><a href="#configure-consul-agent">Configure Consul Agent</a>
 <ul>
-<li><a href="#watch-handler-command:b6885e1f85551f51a4707c402f8200a3">Watch Handler Command</a></li>
+<li><a href="#watch-handler-command">Watch Handler Command</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#run-fireap-task:b6885e1f85551f51a4707c402f8200a3">Run &ldquo;fireap&rdquo; Task</a></li>
-<li><a href="#references:b6885e1f85551f51a4707c402f8200a3">References</a></li>
+<li><a href="#run-fireap-task">Run &ldquo;fireap&rdquo; Task</a></li>
+<li><a href="#references">References</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -380,7 +377,7 @@ or <code>bar</code> can be specified in the sample configuration of this documen
 		<ul class="sidebar-category-list">
 		
 			<li>
-				<a href="http://key-amb.github.io/fireap-doc/categories/general">
+				<a href="https://progrhyme.github.io/fireap-doc/categories/general">
 					<span class="doc-list-category">General</span>
 				</a>
 				<ul>
@@ -403,7 +400,7 @@ or <code>bar</code> can be specified in the sample configuration of this documen
 		<h4 class="sidebar-heading">Tags</h4>
 		<div class="tag-box">
 		
-			<a class="tag-item" href="http://key-amb.github.io/fireap-doc/tags/document">document</a>
+			<a class="tag-item" href="https://progrhyme.github.io/fireap-doc/tags/document">document</a>
 		
 		</div>
 	</div>
@@ -424,20 +421,20 @@ or <code>bar</code> can be specified in the sample configuration of this documen
 </div> 
 
 <footer class="doc-footer">
-	<p class="doc-footer-em">Browse <strong><a href="https://github.com/key-amb/fireap/">Repository</a></strong></p>
-	<p>Copyright (c) 2016, YASUTAKE Kiyoshi; All rights reserved.</p>
+	<p class="doc-footer-em">Browse <strong><a href="https://github.com/progrhyme/fireap/">Repository</a></strong></p>
+	<p>Copyright (c) 2016-2017, IKEDA Kiyoshi; All rights reserved.</p>
 	<p>Powered by <strong><a href="https://github.com/key-amb/hugo-theme-bootie-docs">Bootie Docs</a></strong> - theme for <a href="http://gohugo.io/">Hugo</a> by <a href="https://github.com/key-amb/">key-amb</a>.</p>
 </footer>
 
 
 
-<script src="http://key-amb.github.io/fireap-doc/js/jquery.min.js"></script>
-<script src="http://key-amb.github.io/fireap-doc/js/bootstrap.min.js"></script>
+<script src="https://progrhyme.github.io/fireap-doc/js/jquery.min.js"></script>
+<script src="https://progrhyme.github.io/fireap-doc/js/bootstrap.min.js"></script>
 
-<script src="http://key-amb.github.io/fireap-doc/js/highlight.pack.js"></script>
+<script src="https://progrhyme.github.io/fireap-doc/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="http://key-amb.github.io/fireap-doc/js/ie10-viewport-bug-workaround.js"></script>
-<script src="http://key-amb.github.io/fireap-doc/js/bootie-docs.js"></script>
+<script src="https://progrhyme.github.io/fireap-doc/js/ie10-viewport-bug-workaround.js"></script>
+<script src="https://progrhyme.github.io/fireap-doc/js/bootie-docs.js"></script>
 
 </body>
 </html>

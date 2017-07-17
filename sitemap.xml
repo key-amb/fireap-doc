@@ -1,35 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://key-amb.github.io/fireap-doc/</loc>
+    <loc>https://progrhyme.github.io/fireap-doc/getting-started/</loc>
+    <lastmod>2016-05-05T11:57:51+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://progrhyme.github.io/fireap-doc/cli-usage/</loc>
+    <lastmod>2016-05-05T11:59:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://progrhyme.github.io/fireap-doc/specification/</loc>
+    <lastmod>2016-05-05T11:59:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://progrhyme.github.io/fireap-doc/index/_dummy/</loc>
+    <lastmod>2016-05-05T12:01:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://progrhyme.github.io/fireap-doc/</loc>
+    <lastmod>2016-05-05T11:57:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://progrhyme.github.io/fireap-doc/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://progrhyme.github.io/fireap-doc/tags/document/</loc>
+    <lastmod>2016-05-05T11:57:51+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://progrhyme.github.io/fireap-doc/categories/general/</loc>
+    <lastmod>2016-05-05T11:57:51+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://progrhyme.github.io/fireap-doc/index/</loc>
     <lastmod>2016-05-05T12:01:29+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://key-amb.github.io/fireap-doc/index/_dummy/</loc>
-    <lastmod>2016-05-05T12:01:29+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://key-amb.github.io/fireap-doc/_index/</loc>
-    <lastmod>2016-05-05T11:57:04+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://key-amb.github.io/fireap-doc/getting-started/</loc>
+    <loc>https://progrhyme.github.io/fireap-doc/tags/</loc>
     <lastmod>2016-05-05T11:57:51+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://key-amb.github.io/fireap-doc/cli-usage/</loc>
-    <lastmod>2016-05-05T11:59:09+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://key-amb.github.io/fireap-doc/specification/</loc>
-    <lastmod>2016-05-05T11:59:13+09:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="alternate" href="/index.xml" type="application/rss+xml" title="fireap">
-		<link rel="icon" href="http://key-amb.github.io/fireap-doc/favicon.ico">
+		<link rel="icon" href="https://progrhyme.github.io/fireap-doc/favicon.ico">
 		<title>CLI Usage - fireap</title>
 		
-		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/highlight/atelier-forest-dark.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/bootstrap.min.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/theme.css">
-		<link rel="stylesheet" href="http://key-amb.github.io/fireap-doc/css/bootie-docs.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/fireap-doc/css/highlight/atelier-forest-dark.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/fireap-doc/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/fireap-doc/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/fireap-doc/css/theme.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/fireap-doc/css/bootie-docs.css">
+		<link rel="stylesheet" href="https://progrhyme.github.io/fireap-doc/css/site.css">
 	</head>
 
 <body role="document">
@@ -28,22 +28,19 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="http://key-amb.github.io/fireap-doc/">fireap</a>
+				<a class="navbar-brand" href="https://progrhyme.github.io/fireap-doc/">fireap</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li ><a href="http://key-amb.github.io/fireap-doc/">Home</a></li>
+					<li ><a href="https://progrhyme.github.io/fireap-doc/">Home</a></li>
+			
 			
 				
+					<li ><a href="/fireap-doc/getting-started/">Quickstart</a></li>
 				
-					
-					<li ><a href="http://key-amb.github.io/fireap-doc/getting-started">Quickstart</a></li>
+					<li class="active"><a href="/fireap-doc/cli-usage/">CLI</a></li>
 				
-					
-					<li class="active"><a href="http://key-amb.github.io/fireap-doc/cli-usage">CLI</a></li>
-				
-					
-					<li ><a href="http://key-amb.github.io/fireap-doc/specification">Spec</a></li>
+					<li ><a href="/fireap-doc/specification/">Spec</a></li>
 				
 			
 				
@@ -51,7 +48,7 @@
 				
 				<form class="navbar-form navbar-left" role="search" action="https://www.google.co.jp/search" method="get">
 					<div class="input-group doc-search-form">
-						<input type="hidden" name="as_sitesearch" value="key-amb.github.io/fireap-doc">
+						<input type="hidden" name="as_sitesearch" value="progrhyme.github.io/fireap-doc">
 						<input type="text" name="as_q" class="search-query doc-search-input-text" placeholder="Search Site">
 						<span class="input-group-addon input-group-btn doc-search-input-btn">
 							<button class="btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
@@ -83,7 +80,7 @@
 
 <p>As for detailed usage of CLI, run <code>fireap help</code>.</p>
 
-<h2 id="general-information:1417e9bcba133c9b46200323a311e359">General Information</h2>
+<h2 id="general-information">General Information</h2>
 
 <p>Global options:</p>
 
@@ -97,9 +94,9 @@ option.</li>
 </ul></li>
 </ul>
 
-<h2 id="subcommands:1417e9bcba133c9b46200323a311e359">Subcommands</h2>
+<h2 id="subcommands">Subcommands</h2>
 
-<h3 id="fireap-task:1417e9bcba133c9b46200323a311e359"><code>fireap task</code></h3>
+<h3 id="fireap-task"><code>fireap task</code></h3>
 
 <pre><code class="language-bash">fireap task [-w &lt;WIDTH&gt;] [OPTIONS]
 </code></pre>
@@ -107,7 +104,7 @@ option.</li>
 <p>This shows the task settings under <code>[task]</code> sections in the configuration file.<br />
 By this command, you can also check if the configuration is valid or not.</p>
 
-<h3 id="fireap-fire:1417e9bcba133c9b46200323a311e359"><code>fireap fire</code></h3>
+<h3 id="fireap-fire"><code>fireap fire</code></h3>
 
 <pre><code class="language-bash">fireap fire -a &lt;APP&gt; [-v &lt;VERSION&gt;] [OPTIONS]
 # To limit target node to execute the task
@@ -125,7 +122,7 @@ For example, when the version last executed is <em>&ldquo;v1.0.0&rdquo;</em>, ne
 
 <p>Read <a href="../getting-started">Getting Started</a> for more information.</p>
 
-<h3 id="fireap-clear:1417e9bcba133c9b46200323a311e359"><code>fireap clear</code></h3>
+<h3 id="fireap-clear"><code>fireap clear</code></h3>
 
 <pre><code class="language-bash">fireap clear -a &lt;APP&gt; [OPTIONS]
 </code></pre>
@@ -136,7 +133,7 @@ multiple execution of a task.</p>
 <p>You do not need to run this in usual operation.<br />
 But <strong>fireap</strong> supports this subcommand for rare possibility.</p>
 
-<h3 id="fireap-reap:1417e9bcba133c9b46200323a311e359"><code>fireap reap</code></h3>
+<h3 id="fireap-reap"><code>fireap reap</code></h3>
 
 <pre><code class="language-bash">fireap reap [OPTIONS]
 fireap reap --dry-run [OPTIONS]
@@ -158,7 +155,7 @@ prints them.</p>
 <p>Read <a href="../getting-started">Getting Started</a> for detailed instruction to use this
 as <em>Consul Watch Handler</em>.</p>
 
-<h3 id="fireap-monitor:1417e9bcba133c9b46200323a311e359"><code>fireap monitor</code></h3>
+<h3 id="fireap-monitor"><code>fireap monitor</code></h3>
 
 <pre><code class="language-bash">fireap monitor -a &lt;APP&gt; [OPTIONS]
 fireap monitor -a &lt;APP&gt; --one-shot [OPTIONS]
@@ -190,14 +187,14 @@ environments).</p>
 <ul>
 <li>
 <ul>
-<li><a href="#general-information:1417e9bcba133c9b46200323a311e359">General Information</a></li>
-<li><a href="#subcommands:1417e9bcba133c9b46200323a311e359">Subcommands</a>
+<li><a href="#general-information">General Information</a></li>
+<li><a href="#subcommands">Subcommands</a>
 <ul>
-<li><a href="#fireap-task:1417e9bcba133c9b46200323a311e359"><code>fireap task</code></a></li>
-<li><a href="#fireap-fire:1417e9bcba133c9b46200323a311e359"><code>fireap fire</code></a></li>
-<li><a href="#fireap-clear:1417e9bcba133c9b46200323a311e359"><code>fireap clear</code></a></li>
-<li><a href="#fireap-reap:1417e9bcba133c9b46200323a311e359"><code>fireap reap</code></a></li>
-<li><a href="#fireap-monitor:1417e9bcba133c9b46200323a311e359"><code>fireap monitor</code></a></li>
+<li><a href="#fireap-task"><code>fireap task</code></a></li>
+<li><a href="#fireap-fire"><code>fireap fire</code></a></li>
+<li><a href="#fireap-clear"><code>fireap clear</code></a></li>
+<li><a href="#fireap-reap"><code>fireap reap</code></a></li>
+<li><a href="#fireap-monitor"><code>fireap monitor</code></a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -209,7 +206,7 @@ environments).</p>
 		<ul class="sidebar-category-list">
 		
 			<li>
-				<a href="http://key-amb.github.io/fireap-doc/categories/general">
+				<a href="https://progrhyme.github.io/fireap-doc/categories/general">
 					<span class="doc-list-category">General</span>
 				</a>
 				<ul>
@@ -232,7 +229,7 @@ environments).</p>
 		<h4 class="sidebar-heading">Tags</h4>
 		<div class="tag-box">
 		
-			<a class="tag-item" href="http://key-amb.github.io/fireap-doc/tags/document">document</a>
+			<a class="tag-item" href="https://progrhyme.github.io/fireap-doc/tags/document">document</a>
 		
 		</div>
 	</div>
@@ -253,20 +250,20 @@ environments).</p>
 </div> 
 
 <footer class="doc-footer">
-	<p class="doc-footer-em">Browse <strong><a href="https://github.com/key-amb/fireap/">Repository</a></strong></p>
-	<p>Copyright (c) 2016, YASUTAKE Kiyoshi; All rights reserved.</p>
+	<p class="doc-footer-em">Browse <strong><a href="https://github.com/progrhyme/fireap/">Repository</a></strong></p>
+	<p>Copyright (c) 2016-2017, IKEDA Kiyoshi; All rights reserved.</p>
 	<p>Powered by <strong><a href="https://github.com/key-amb/hugo-theme-bootie-docs">Bootie Docs</a></strong> - theme for <a href="http://gohugo.io/">Hugo</a> by <a href="https://github.com/key-amb/">key-amb</a>.</p>
 </footer>
 
 
 
-<script src="http://key-amb.github.io/fireap-doc/js/jquery.min.js"></script>
-<script src="http://key-amb.github.io/fireap-doc/js/bootstrap.min.js"></script>
+<script src="https://progrhyme.github.io/fireap-doc/js/jquery.min.js"></script>
+<script src="https://progrhyme.github.io/fireap-doc/js/bootstrap.min.js"></script>
 
-<script src="http://key-amb.github.io/fireap-doc/js/highlight.pack.js"></script>
+<script src="https://progrhyme.github.io/fireap-doc/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="http://key-amb.github.io/fireap-doc/js/ie10-viewport-bug-workaround.js"></script>
-<script src="http://key-amb.github.io/fireap-doc/js/bootie-docs.js"></script>
+<script src="https://progrhyme.github.io/fireap-doc/js/ie10-viewport-bug-workaround.js"></script>
+<script src="https://progrhyme.github.io/fireap-doc/js/bootie-docs.js"></script>
 
 </body>
 </html>
