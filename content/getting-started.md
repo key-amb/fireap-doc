@@ -33,7 +33,7 @@ NOTE:
 **fireap** tasks will be executed.
 
 ```
-git clone https://github.com/key-amb/fireap.git
+git clone https://github.com/progrhyme/fireap.git
 cd fireap
 # Install ruby gems in depend. Install "bundler" gem beforehand.
 bundle install
@@ -43,7 +43,7 @@ bin/fireap help
 If last command successfully shows the CLI usage, **fireap** is ready for you.
 
 Instead HEAD of master branch, you can download released archives from
-https://github.com/key-amb/fireap/releases . It is your choice.
+https://github.com/progrhyme/fireap/releases . It is your choice.
 
 ## Configure
 
@@ -121,7 +121,7 @@ after_commands = []
 Some of configurations are commented out in this snippet.
 You can enable it by uncommenting.
 
-You find a sample in [config/sample.toml](https://github.com/key-amb/fireap/blob/master/config/sample.toml)
+You find a sample in [config/sample.toml](https://github.com/progrhyme/fireap/blob/master/config/sample.toml)
 in this repository, which is similar to the one above.
 
 Here are supplementary explanations:

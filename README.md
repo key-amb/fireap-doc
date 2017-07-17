@@ -1,5 +1,5 @@
 # fireap-doc
 
-Documentation site of [fireap](https://github.com/key-amb/fireap).
+Documentation site of [fireap](https://github.com/progrhyme/fireap).
 
-Powered by [Hugo](http://gohugo.io/) with theme [Bootie-Docs](https://github.com/key-amb/hugo-theme-bootie-docs).
+Powered by [Hugo](http://gohugo.io/) with theme [Bootie-Docs](https://github.com/progrhyme/hugo-theme-bootie-docs).

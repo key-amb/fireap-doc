@@ -1,25 +1,28 @@
-baseurl = "http://key-amb.github.io/fireap-doc"
+baseurl = "https://progrhyme.github.io/fireap-doc"
 languageCode = "en-us"
 title = "fireap"
 theme = "bootie-docs"
-copyright = "Copyright (c) 2016, YASUTAKE Kiyoshi; All rights reserved."
+copyright = "Copyright (c) 2016-2017, IKEDA Kiyoshi; All rights reserved."
 
 [params]
   description = "(fire + reap) Fast task runner on Consul cluster"
   #withSitePosts = true
-  searchDomain = "key-amb.github.io/fireap-doc"
+  searchDomain = "progrhyme.github.io/fireap-doc"
   noCategoryLink = true
-  repositoryUrl = "https://github.com/key-amb/fireap/"
+  repositoryUrl = "https://github.com/progrhyme/fireap/"
   highlightStyle = "atelier-forest-dark"
 
-[[params.mainMenu]]
+[[menu.main]]
   name = "Quickstart"
-  link = "getting-started"
+  url  = "/getting-started/"
+  weight = 20
 
-[[params.mainMenu]]
+[[menu.main]]
   name = "CLI"
-  link = "cli-usage"
+  url = "/cli-usage/"
+  weight = 30
 
-[[params.mainMenu]]
+[[menu.main]]
   name = "Spec"
-  link = "specification"
+  url = "/specification/"
+  weight = 40
