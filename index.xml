@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>_index on fireap</title>
-    <link>https://progrhyme.github.io/fireap-doc/</link>
+    <link>https://progrhy.me/fireap-doc/</link>
     <description>Recent content in _index on fireap</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2016-2017, IKEDA Kiyoshi; All rights reserved.</copyright>
     <lastBuildDate>Thu, 05 May 2016 11:57:04 +0900</lastBuildDate>
     
-	<atom:link href="https://progrhyme.github.io/fireap-doc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://progrhy.me/fireap-doc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Getting Started</title>
-      <link>https://progrhyme.github.io/fireap-doc/getting-started/</link>
+      <link>https://progrhy.me/fireap-doc/getting-started/</link>
       <pubDate>Thu, 05 May 2016 11:57:51 +0900</pubDate>
       
-      <guid>https://progrhyme.github.io/fireap-doc/getting-started/</guid>
+      <guid>https://progrhy.me/fireap-doc/getting-started/</guid>
       <description>This guide shows you how to install and configure fireap to run it, and what is needed beforehand.
 Prerequisites Software Requirements  Consul v0.6.3 or later (recommended; v0.4.0 or higher is needed at least) Ruby v2.3.0 or later (recommended, but not necessarily)  Set up Consul Cluster Before you start with fireap, you need a Consul cluster.
 Please refer to documentation on consul.io to set up Consul cluster in your environment.</description>
@@ -25,10 +25,10 @@ Please refer to documentation on consul.io to set up Consul cluster in your envi
     
     <item>
       <title>CLI Usage</title>
-      <link>https://progrhyme.github.io/fireap-doc/cli-usage/</link>
+      <link>https://progrhy.me/fireap-doc/cli-usage/</link>
       <pubDate>Thu, 05 May 2016 11:59:09 +0900</pubDate>
       
-      <guid>https://progrhyme.github.io/fireap-doc/cli-usage/</guid>
+      <guid>https://progrhy.me/fireap-doc/cli-usage/</guid>
       <description>This guide shows overview of fireap subcommands and typical usecases of fireap CLI.
 As for detailed usage of CLI, run fireap help.
 General Information Global options:
@@ -37,10 +37,10 @@ General Information Global options:
     
     <item>
       <title>Specification</title>
-      <link>https://progrhyme.github.io/fireap-doc/specification/</link>
+      <link>https://progrhy.me/fireap-doc/specification/</link>
       <pubDate>Thu, 05 May 2016 11:59:13 +0900</pubDate>
       
-      <guid>https://progrhyme.github.io/fireap-doc/specification/</guid>
+      <guid>https://progrhy.me/fireap-doc/specification/</guid>
       <description>Consul Kv Datastore Fireap stores its working data on Consul Kv.
 All kinds of data appear in the table below:
    path data type description     fireap/&amp;lt;app&amp;gt;/lock String Task execution lock to avoid multiple execution at the same time   fireap/&amp;lt;app&amp;gt;/nodes/&amp;lt;node&amp;gt;/version String Last executed task version on &amp;lt;node&amp;gt;   fireap/&amp;lt;app&amp;gt;/nodes/&amp;lt;node&amp;gt;/semaphore Integer How many subscribers are acceptable for &amp;lt;node&amp;gt;   fireap/&amp;lt;app&amp;gt;/nodes/&amp;lt;node&amp;gt;/update_info JSON Includes date when last task execution completed and from which host &amp;lt;node&amp;gt; &amp;ldquo;pulled&amp;rdquo; the update    Here are some supplementary information:</description>
@@ -48,10 +48,10 @@ All kinds of data appear in the table below:
     
     <item>
       <title>_dummy</title>
-      <link>https://progrhyme.github.io/fireap-doc/index/_dummy/</link>
+      <link>https://progrhy.me/fireap-doc/index/_dummy/</link>
       <pubDate>Thu, 05 May 2016 12:01:29 +0900</pubDate>
       
-      <guid>https://progrhyme.github.io/fireap-doc/index/_dummy/</guid>
+      <guid>https://progrhy.me/fireap-doc/index/_dummy/</guid>
       <description></description>
     </item>
     

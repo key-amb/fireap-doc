@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on fireap</title>
-    <link>https://progrhyme.github.io/fireap-doc/categories/</link>
+    <link>https://progrhy.me/fireap-doc/categories/</link>
     <description>Recent content in Categories on fireap</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2016-2017, IKEDA Kiyoshi; All rights reserved.</copyright>
     
-	<atom:link href="https://progrhyme.github.io/fireap-doc/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://progrhy.me/fireap-doc/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>General</title>
-      <link>https://progrhyme.github.io/fireap-doc/categories/general/</link>
+      <link>https://progrhy.me/fireap-doc/categories/general/</link>
       <pubDate>Thu, 05 May 2016 11:57:51 +0900</pubDate>
       
-      <guid>https://progrhyme.github.io/fireap-doc/categories/general/</guid>
+      <guid>https://progrhy.me/fireap-doc/categories/general/</guid>
       <description></description>
     </item>
     
